@@ -4,6 +4,18 @@ const apps = {
         icon: "",
         window: "welcomeWindow",
         location: "desktop"
+    },
+    sigma: {
+        name: "Sigma",
+        icon: "",
+        window: "sigmaWindow",
+        location: "desktop"
+    },
+    notepad: {
+        name: "Notepad",
+        icon: "📓",
+        window: "notepadWindow",
+        location: "desktop"
     }
 }
 
