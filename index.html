@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="style.css">
+        <script src="scripts/script.js"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,9 +13,27 @@
     </head>
 
     <body>
-        <div style="border: solid; padding: 20px; width: 128px; border-radius: 7px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="nav-bar">
+            <p style="margin-left: 16px;">Re:OS</p>
+            <p style="margin-right: 16px;" id="timeElement">DD/MM/YYYY</p>
+        </div>
+
+        <div class="window" id="welcomeWindow" style="top: 50%;">
+            <div class="window-handle">
+                <p>HANDLE</p>
+                <p style="cursor: pointer;" class="window-close">✖️</p>
+            </div>
             <h1>Re:OS</h1>
             <p>Re:ZERO OS</p>
         </div>
+
+        
+        <div class="app-icon" data-app="welcome">
+            <h1>❓</h1>
+        </div>
+
+
+        <script src="scripts/windowManager.js"></script>
+        <script src="scripts/appManager.js"></script>
     </body>
 </html>
