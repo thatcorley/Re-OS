@@ -1,36 +1,56 @@
 const apps = {
     welcome: {
         name: "Welcome",
-        icon: "",
-        window: "welcomeWindow",
-        location: "desktop"
+        icon: "🤔",
+        window: "welcome",
+        desktop: true
     },
-    sigma: {
-        name: "Sigma",
-        icon: "",
-        window: "sigmaWindow",
-        location: "desktop"
+    browser: {
+        name: "Wikipedia",
+        icon: "🌐",
+        window: "wikipedia",
+        desktop: true
     },
-    notepad: {
-        name: "Notepad",
-        icon: "📓",
-        window: "notepadWindow",
-        location: "desktop"
+    map: {
+        name: "World Map",
+        icon: "🗺️",
+        window: "map",
+        desktop: true
+    },
+    webNovel: {
+        name: "Web Novel",
+        icon: "📖",
+        window: "webNovel",
+        desktop: true
+    },
+    wallpapers: {
+        name: "Wallpapers",
+        icon: "🖼️",
+        window: "wallpapers",
+        desktop: true
     }
 }
 
-const appIcons = document.getElementsByClassName("app-icon");
+const desktop = document.getElementById("desktop");
 
-for (let i = 0; i < appIcons.length; i++) {
-        
-    appIcons.item(i).addEventListener("click", function() {
-        const appName = this.dataset.app;
-        const appWindow = document.getElementById(appName + "Window");
+for (const appID in apps) {
+    const app = apps[appID];
+    if (app.desktop == false) {
+        continue;
+    }
 
+    const appIcon = document.createElement("div");
+    appIcon.classList.add("app-icon");
+    appIcon.innerHTML = `
+        <h1>${app.icon}</h1>
+    `;
+
+    appIcon.addEventListener("click", function() {
+        const appWindow = document.getElementById(app.window+"Window");
         if (appWindow) {
             openWindow(appWindow);
         }
-    })
-}
+    });
 
-// Add something to auto add apps to desktop later
+    desktop.appendChild(appIcon);
+}

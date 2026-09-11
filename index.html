@@ -4,8 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="style.css">
-        <script src="scripts/script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,40 +12,86 @@
     </head>
 
     <body>
-        <div class="nav-bar">
-            <p style="margin-left: 16px;">Re:OS</p>
+
+        <audio id="rbdAudio" src="assets/audio/return-by-death.mp3"></audio>
+        <div id="nav-bar">
+            <h2 style="margin-left: 16px;">Re: OS</h2>
             <p style="margin-right: 16px;" id="timeElement">DD/MM/YYYY</p>
         </div>
 
-        <div class="window" id="welcomeWindow" style="top: 50%;">
+        <div class="window" id="welcomeWindow">
             <div class="window-handle">
                 <p>HANDLE</p>
                 <p style="cursor: pointer;" class="window-close">✖️</p>
             </div>
-            <h1>Re:OS</h1>
-            <p>Re:ZERO OS</p>
+            <div class="window-content">
+                <h1>Re:OS</h1>
+                <p>Re:ZERO OS</p>
+            </div>
         </div>
 
-        <div class="window" id="sigmaWindow" style="top: 50%;">
+        <div class="window" id="wikipediaWindow" style="width: 900px; height: 750px;">
             <div class="window-handle">
-                <p>HANDLE</p>
+                <p>Wiki (Fandom)</p>
                 <p style="cursor: pointer;" class="window-close">✖️</p>
             </div>
-            <h1>sigma</h1>
-            <p>boy</p>
+            <div class="window-content">
+                <iframe src="https://rezero.fandom.com/wiki/Re:Zero_Wiki" frameborder="0" style="width: 100%; height: 100%; display: block;"></iframe>
+            </div>
         </div>
 
-        <div class="desktop">
-            <div class="app-icon" data-app="welcome">
-                <h1>❓</h1>
+        <div class="window" id="webNovelWindow" style="width: 600px; height: 700px;">
+            <div class="window-handle">
+                <p>Web Novel (Witch Cult Translations)</p>
+                <p style="cursor: pointer;" class="window-close">✖️</p>
             </div>
-            <div class="app-icon" data-app="sigma">
-                <h1>🔥</h1>
+            <div class="window-content">
+                <iframe src="https://witchculttranslation.com/table-of-content/" frameborder="0" style="width: 100%; height: 100%; display: block;"></iframe>
             </div>
         </div>
+
+        <div class="window" id="mapWindow" style="top: 50%; width: 928px; height: 586px;">
+            <div class="window-handle">
+                <p>The World Map</p>
+                <p class="window-close">✖️</p>
+            </div>
+            <div class="window-content">
+                <img src="assets/wallpapers/world-map-paper.png" alt="A map of the world" style="width: 100%; height: 100%;">
+            </div>
+        </div>
+
+        <div class="window" id="wallpapersWindow" style="top: 50%; width: 500px; height: 400px; display: flex;">
+            <div class="window-handle">
+                <p>Wallpapers</p>
+                <p class="window-close">✖️</p>
+            </div>
+            <div class="window-content" style="background-color: rgb(196, 196, 196);">
+                <div class="wallpeper-grid">
+                    <div class="wallpaper-selection" data-wallpaper="watchtower.jpg">
+                        <img src="assets/wallpapers/watchtower.jpg">
+                        <p>The Watchtower</p>
+                    </div>
+                    <div class="wallpaper-selection" data-wallpaper="world-map.png">
+                        <img src="assets/wallpapers/world-map.png">
+                        <p>The World Map</p>
+                    </div>
+                    <div class="wallpaper-selection" data-wallpaper="world-map-paper.png">
+                        <img src="assets/wallpapers/world-map-paper.png">
+                        <p>The World Map (Old)</p>
+                    </div>
+                    <div class="wallpaper-selection" data-wallpaper="seven-sins.jpg">
+                        <img src="assets/wallpapers/seven-sins.jpg">
+                        <p>The Seven Sins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="desktop"></div>
 
 
         <script src="scripts/windowManager.js"></script>
         <script src="scripts/appManager.js"></script>
+        <script src="scripts/system.js"></script>
     </body>
 </html>

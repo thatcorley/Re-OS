@@ -9,3 +9,6 @@ Calculator
 Hackclub thing?
 Small Game?
 Map
+
+Intro scene:
+Darkness > Heart Appears > Click to crush as satella > RBD audio > OS opens

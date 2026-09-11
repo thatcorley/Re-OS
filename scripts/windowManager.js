@@ -1,4 +1,8 @@
 const windows = document.getElementsByClassName("window")
+const navBar = document.getElementById("nav-bar")
+const navbarHeight = navBar.offsetHeight;
+
+var biggestIndex = 1;
 
 for (let i = 0; i < windows.length; i++) {
         
@@ -7,6 +11,11 @@ for (let i = 0; i < windows.length; i++) {
     windows.item(i).querySelector(".window-close").addEventListener("click", function() {closeWindow(windows.item(i))})
 }
 
+function bringToTop(element) {
+    biggestIndex++;
+    element.style.zIndex = biggestIndex;
+    navBar.style.zIndex = biggestIndex + 1;
+}
 
 function dragElement(element) {
     var initX = 0, initY = 0, currX = 0, currY = 0;
@@ -37,8 +46,9 @@ function dragElement(element) {
         initY = currY - e.clientY;
         currX = e.clientX;
         currY = e.clientY;
-        element.style.top = (element.offsetTop - initY) + "px";
+        element.style.top = Math.max((element.offsetTop - initY), navbarHeight) + "px";
         element.style.left = (element.offsetLeft - initX) + "px";
+        bringToTop(element)
     }
 
     function closeDragElement() {
@@ -52,5 +62,6 @@ function closeWindow(element) {
 }
 
 function openWindow(element) {
-    element.style.display = "block"
+    element.style.display = "flex"
+    bringToTop(element)
 }
