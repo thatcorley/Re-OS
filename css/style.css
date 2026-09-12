@@ -1,5 +1,4 @@
 body {
-    font-family: "Cinzel Decorative", serif;
 
     background-image: url(../assets/wallpapers/watchtower.jpg);
     background-size: cover;
@@ -47,6 +46,7 @@ body {
     border-bottom: solid;
     align-items: center;
     font-weight: bold;
+    font-family: 'Cinzel Decorative', serif;
 }
 
 .window-close {
