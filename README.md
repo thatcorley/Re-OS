@@ -9,6 +9,6 @@ A Re:Zero inspired WebOS
 
 ❎ Web Novel (Witch Cult Translations)
 
-❎ Taygeta Library (Books of the dead)
-
 ✅ Forbidden Library (Game)
+
+❎ Taygeta Library (Books of the dead)
