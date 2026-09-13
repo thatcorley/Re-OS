@@ -16,6 +16,7 @@ Still in progress at the moment so expect missing features and rough edges.
 - ✅ Wallpapers
 - ✅ World Map
 - ✅ Find Betty (Game)
+
 Click on a door for a 1 in 3 chance to find Betty
 - ❎ Taygeta Library (Books of the Dead)
 
