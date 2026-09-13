@@ -1,3 +1,5 @@
+import systemSettings from "./config.js";
+
 const apps = {
     welcome: {
         enabled: true,
@@ -49,36 +51,37 @@ function playRBD() {
 
 const desktop = document.getElementById("desktop");
 
-
-for (const appID in apps) {
-    const app = apps[appID];
-    const appWindow = document.getElementById(app.window+"Window");
-    if (app.enabled) {
-        if (app.desktop == false) {
-            continue;
-        }
-        
-        if (app.openOnStart == true) {
-            openWindow(appWindow);
-        }
-
-        const appIcon = document.createElement("div");
-        appIcon.classList.add("app-icon");
-        appIcon.innerHTML = `
-            <h1>${app.icon}</h1>
-        `;
-
-        appIcon.addEventListener("click", function() {
-            if (appWindow) {
+if (systemSettings.appEnabled.state) {
+    for (const appID in apps) {
+        const app = apps[appID];
+        const appWindow = document.getElementById(app.window+"Window");
+        if (app.enabled) {
+            if (app.desktop == false) {
+                continue;
+            }
+            
+            if (app.openOnStart == true) {
                 openWindow(appWindow);
             }
-            if (app.function) {
-                app.function()
-            }
-        });
 
-        desktop.appendChild(appIcon);
-    } else {
-        appWindow.remove()
+            const appIcon = document.createElement("div");
+            appIcon.classList.add("app-icon");
+            appIcon.innerHTML = `
+                <h1>${app.icon}</h1>
+            `;
+
+            appIcon.addEventListener("click", function() {
+                if (appWindow) {
+                    openWindow(appWindow);
+                }
+                if (app.function) {
+                    app.function()
+                }
+            });
+
+            desktop.appendChild(appIcon);
+        } else {
+            appWindow.remove()
+        }
     }
 }

@@ -4,43 +4,57 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <script type="module" src="scripts/config.js"></script>
+
         <link rel="stylesheet" href="css/style.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+
+        <title>Re:OS | WebOS</title>
     </head>
 
     <body>
-        <!-- Boot Screen -->
-        <!-- <div id="white-flash"></div>
+        <div id="white-flash"></div>
         <div id="boot-screen" class="boot-screen">
+            <!-- Boot Screen -->
+            <div id="audio-popup-blur"></div>
+            <div id="audio-popup">
+                <div id="audio-popup-content">
+                    <h2>Click to unmute audio</h2>
+                    <button id="unmute-button">OK</button>
+                </div>
+            </div>
             <img src="assets/images/heart.png" id="boot-heart" class="boot-screen">
             <h1 style="color: white; font-family: 'Cinzel Decorative', serif;">Crush the heart</h1>
+            
+            <script src="scripts/market/three.r134.min.js"></script>
+            <script src="scripts/market/vanta.fog.min.js"></script>
+            <script>
+                VANTA.FOG({
+                el: "#boot-screen",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                highlightColor: 0x48003a,
+                midtoneColor: 0x110022,
+                lowlightColor: 0x4500a2,
+                baseColor: 0x0,
+                blurFactor: 0.25,
+                speed: 0.5,
+                zoom: 1
+                })
+            </script>
         </div>
-        <script src="scripts/boot.js"></script>
-
-        <script src="scripts/market/three.r134.min.js"></script>
-        <script src="scripts/market/vanta.fog.min.js"></script>
-        <script>
-            VANTA.FOG({
-            el: "#boot-screen",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            highlightColor: 0x0,
-            midtoneColor: 0x1e1e1e,
-            lowlightColor: 0x222222,
-            baseColor: 0x0
-            })
-        </script> -->
+        <script type="module" src="scripts/boot.js"></script>
 
         <!-- The Web OS Shi-->
         <div id="nav-bar">
             <h2 style="margin-left: 16px; font-family: 'Cinzel Decorative', serif;">Re:OS</h2>
-            <p style="margin-right: 16px;" id="timeElement">DD/MM/YYYY</p>
+            <p style="margin-right: 16px;" id="timeElement">DD/MM/YYYY HH:MM:SS</p>
         </div>
 
         <div class="window" id="welcomeWindow" style="width: 500px; top: 25%;">
@@ -116,7 +130,6 @@
 
 
         <script src="scripts/windowManager.js"></script>
-        <script src="scripts/appManager.js"></script>
-        <script src="scripts/system.js"></script>
+        <script type="module" src="scripts/appManager.js"></script>
     </body>
 </html>
