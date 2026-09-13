@@ -1,6 +1,6 @@
 # Re:OS
 
-A Re:Zero inspired WebOS — a desktop-style interface, built entirely with HTML, CSS, and JavaScript, that runs in your browser.
+A Re:Zero inspired WebOS - a desktop-style interface, built entirely with HTML, CSS, and JavaScript, that runs in your browser.
 
 **Live Demo:** [thatcorley.github.io/Re-OS](https://thatcorley.github.io/Re-OS/)
 
@@ -23,7 +23,7 @@ Still in progress at the moment so expect missing features and rough edges.
 - Animated fog boot screen made by [Vanta.js](https://www.vantajs.com/)
 - Draggable, closable windows via a custom window manager
 - Swappable desktop wallpapers
-- Modular app system — each app uses an app registry which can use different functions and js files
+- Modular app system - each app uses an app registry which can use different functions and js files
 
 ## Tech stack
 
