@@ -1,6 +1,6 @@
 # Re:OS
 
-A Re:Zero inspired WebOS - a desktop-style interface, built entirely with HTML, CSS, and JavaScript, that runs in your browser.
+A Re:Zero inspired WebOS - a desktop-style website, built entirely with HTML, CSS, and JavaScript, that runs in your browser.
 
 **Live Demo:** [thatcorley.github.io/Re-OS](https://thatcorley.github.io/Re-OS/)
 
