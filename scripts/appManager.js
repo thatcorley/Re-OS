@@ -5,29 +5,14 @@ const apps = {
         icon: "🤔",
         window: "welcome",
         desktop: true,
-        openOnStart: true
-    },
-    wikipedia: {
-        enabled: false,
-        name: "Wikipedia",
-        icon: "🌐",
-        window: "wikipedia",
-        desktop: true,
-        openOnStart: false
+        openOnStart: true,
+        path: "apps/welcome"
     },
     map: {
         enabled: true,
         name: "World Map",
         icon: "🗺️",
         window: "map",
-        desktop: true,
-        openOnStart: false
-    },
-    webNovel: {
-        enabled: false,
-        name: "Web Novel",
-        icon: "📖",
-        window: "webNovel",
         desktop: true,
         openOnStart: false
     },
@@ -46,6 +31,14 @@ const apps = {
         desktop: true,
         openOnStart: false,
         function: playRBD
+    },
+    findBetty: {
+        enabled: true,
+        name: "Find Betty",
+        icon: "🚪",
+        window: "findBetty",
+        desktop: true,
+        openOnStart: false
     }
 }
 
@@ -56,12 +49,11 @@ function playRBD() {
 
 const desktop = document.getElementById("desktop");
 
+
 for (const appID in apps) {
     const app = apps[appID];
+    const appWindow = document.getElementById(app.window+"Window");
     if (app.enabled) {
-        const appWindow = document.getElementById(app.window+"Window");
-        
-
         if (app.desktop == false) {
             continue;
         }
@@ -86,5 +78,7 @@ for (const appID in apps) {
         });
 
         desktop.appendChild(appIcon);
+    } else {
+        appWindow.remove()
     }
 }

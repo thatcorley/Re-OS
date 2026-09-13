@@ -12,8 +12,32 @@
     </head>
 
     <body>
+        <!-- Boot Screen -->
+        <!-- <div id="white-flash"></div>
+        <div id="boot-screen" class="boot-screen">
+            <img src="assets/images/heart.png" id="boot-heart" class="boot-screen">
+            <h1 style="color: white; font-family: 'Cinzel Decorative', serif;">Crush the heart</h1>
+        </div>
+        <script src="scripts/boot.js"></script>
 
-        <audio id="rbdAudio" src="assets/audio/return-by-death.mp3"></audio>
+        <script src="scripts/market/three.r134.min.js"></script>
+        <script src="scripts/market/vanta.fog.min.js"></script>
+        <script>
+            VANTA.FOG({
+            el: "#boot-screen",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0x0,
+            midtoneColor: 0x1e1e1e,
+            lowlightColor: 0x222222,
+            baseColor: 0x0
+            })
+        </script> -->
+
+        <!-- The Web OS Shi-->
         <div id="nav-bar">
             <h2 style="margin-left: 16px; font-family: 'Cinzel Decorative', serif;">Re:OS</h2>
             <p style="margin-right: 16px;" id="timeElement">DD/MM/YYYY</p>
@@ -26,29 +50,9 @@
             </div>
             <div class="window-content">
                 <h1 style="font-family: 'Cinzel Decorative', serif;">Re:OS</h1>
-                <p>A Re:Zero inspired OS created for Stardance by Hackclub</p>
+                <p>A Re:Zero inspired OS</p>
                 <img src="assets/images/re-zero-regulus-corneas.gif" alt="Skateboards" style="width: 100%;">
                 <p>Not many features unfortunately as currently in progress. Hope to add Re:Zero specific apps soon 💀</p>
-            </div>
-        </div>
-
-        <div class="window" id="wikipediaWindow" style="width: 900px; height: 750px;">
-            <div class="window-handle">
-                <p>Wiki (Fandom)</p>
-                <p style="cursor: pointer;" class="window-close">✖️</p>
-            </div>
-            <div class="window-content">
-                <!-- <iframe src="https://rezero.fandom.com/wiki/Re:Zero_Wiki" frameborder="0" style="width: 100%; height: 100%; display: block;"></iframe> -->
-            </div>
-        </div>
-
-        <div class="window" id="webNovelWindow" style="width: 600px; height: 700px;">
-            <div class="window-handle">
-                <p>Web Novel (Witch Cult Translations)</p>
-                <p style="cursor: pointer;" class="window-close">✖️</p>
-            </div>
-            <div class="window-content">
-                <!-- <iframe src="https://witchculttranslation.com/table-of-content/" frameborder="0" style="width: 100%; height: 100%; display: block;"></iframe> -->
             </div>
         </div>
 
@@ -87,6 +91,25 @@
                     </div>
                 </div>
             </div>
+            <script src="scripts/apps/wallpapers.js"></script>
+        </div>
+
+        <div class="window" id="findBettyWindow" style="width: 500px;">
+            <div class="window-handle">
+                <p>Find Betty</p>
+                <p style="cursor: pointer;" class="window-close">✖️</p>
+            </div>
+            <div class="window-content">
+                <p>Which door is Betty behind?</p>
+                <div class="FB-doors">
+                    <img src="assets/images/door.png" class="FB-door">
+                    <img src="assets/images/door.png" class="FB-door">
+                    <img src="assets/images/door.png" class="FB-door">
+                </div>
+                <p id="FB-fails">Fails: 0</p>
+                <p id="FB-wins">Wins: 0</p>
+            </div>
+            <script src="scripts/apps/findBetty.js"></script>
         </div>
 
         <div id="desktop"></div>
