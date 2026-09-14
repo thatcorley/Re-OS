@@ -1,3 +1,5 @@
+import saveManager from "./saveManager.js";
+
 const systemSettings = {
   skipBootScreen: {
     state: false,
@@ -5,9 +7,6 @@ const systemSettings = {
   },
   appEnabled: {
     state: true
-  },
-  localSaves: {
-    state: false
   }
 }
 

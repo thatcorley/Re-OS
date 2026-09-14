@@ -53,14 +53,14 @@
 
         <!-- The Web OS Shi-->
         <div id="nav-bar">
-            <h2 style="margin-left: 16px; font-family: 'Cinzel Decorative', serif;">Re:OS</h2>
-            <p style="margin-right: 16px;" id="timeElement">DD/MM/YYYY HH:MM:SS</p>
+            <h2 style="margin-left: 1rem; font-family: 'Cinzel Decorative', serif;">Re:OS</h2>
+            <p style="margin-right: 1rem;" id="timeElement">DD/MM/YYYY HH:MM:SS</p>
         </div>
 
-        <div class="window" id="welcomeWindow" style="width: 500px; top: 25%;">
+        <div class="window" id="welcomeWindow" style="width: 30rem; top: 25%;">
             <div class="window-handle">
                 <p>Welcome to Re:OS</p>
-                <p style="cursor: pointer;" class="window-close">✖️</p>
+                <p class="window-close">✖️</p>
             </div>
             <div class="window-content">
                 <h1 style="font-family: 'Cinzel Decorative', serif;">Re:OS</h1>
@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <div class="window" id="mapWindow" style="top: 50%; width: 928px; height: 616px;">
+        <div class="window" id="mapWindow" style="top: 50%; width: 58rem; height: 35rem;">
             <div class="window-handle">
                 <p>The World Map</p>
                 <p class="window-close">✖️</p>
@@ -80,13 +80,13 @@
             </div>
         </div>
 
-        <div class="window" id="wallpapersWindow" style="top: 50%; width: 500px; height: 400px;">
+        <div class="window" id="wallpapersWindow" style="top: 50%; width: 31rem; height: 25rem;">
             <div class="window-handle">
                 <p>Wallpapers</p>
                 <p class="window-close">✖️</p>
             </div>
             <div class="window-content" style="background-color: rgb(196, 196, 196);">
-                <div class="wallpeper-grid">
+                <div class="wallpaper-grid">
                     <div class="wallpaper-selection" data-wallpaper="watchtower.jpg">
                         <img src="assets/wallpapers/watchtower.jpg">
                         <p>The Watchtower</p>
@@ -105,13 +105,13 @@
                     </div>
                 </div>
             </div>
-            <script src="scripts/apps/wallpapers.js"></script>
+            <script type="module" src="scripts/apps/wallpapers.js"></script>
         </div>
 
-        <div class="window" id="findBettyWindow" style="width: 500px;">
+        <div class="window" id="findBettyWindow" style="width: 31rem;">
             <div class="window-handle">
                 <p>Find Betty</p>
-                <p style="cursor: pointer;" class="window-close">✖️</p>
+                <p class="window-close">✖️</p>
             </div>
             <div class="window-content">
                 <p>Which door is Betty behind?</p>
@@ -123,12 +123,30 @@
                 <p id="FB-fails">Fails: 0</p>
                 <p id="FB-wins">Wins: 0</p>
             </div>
-            <script src="scripts/apps/findBetty.js"></script>
+            <script type="module" src="scripts/apps/findBetty.js"></script>
+        </div>
+
+        <div class="window" id="achievementsWindow" style="width: 40rem; height: 40rem;">
+            <div class="window-handle">
+                <p>Achievements</p>
+                <p class="window-close">✖️</p>
+            </div>
+            <div class="window-content" style="background-color: rgb(196, 196, 196); width: 100%; height: 100%;">
+                <div id="achievements-list" style="display: flex; flex-direction: column;"></div>
+            </div>
         </div>
 
         <div id="desktop"></div>
 
+        <div id="achievement-popup">
+            <h1 id="achievement-icon">💀</h1>
+            <div style="flex-direction: column; width: 100%;">
+                <h1 id="achievement-title" style="padding-left: 1rem;">"I can return by dea-"</h1>
+                <p id="achievement-description" style="padding-left: 1rem;">Crush your heart and trigger Return By Death</p>
+            </div>
+        </div>
 
+        <script type="module" src="scripts/achivements.js"></script>
         <script src="scripts/windowManager.js"></script>
         <script type="module" src="scripts/appManager.js"></script>
     </body>

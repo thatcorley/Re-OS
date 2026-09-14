@@ -1,3 +1,5 @@
+import unlock from "../achivements.js";
+
 const doors = document.getElementsByClassName("FB-door")
 const failText = document.getElementById("FB-fails")
 const winText = document.getElementById("FB-wins")
@@ -15,6 +17,10 @@ for (let i = 0; i < doors.length; i++) {
         } else {
             fail += 1
             failText.innerHTML = "Fails: " + fail
+        }
+
+        if (fail == 10) {
+            unlock("fail_betty_10")
         }
     })
 }

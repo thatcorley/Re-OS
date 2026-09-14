@@ -1,6 +1,7 @@
 const windows = document.getElementsByClassName("window")
 const navBar = document.getElementById("nav-bar")
 const navbarHeight = navBar.offsetHeight;
+const achievementPopup = document.getElementById("achievement-popup")
 
 var biggestIndex = 1;
 
@@ -14,16 +15,12 @@ for (let i = 0; i < windows.length; i++) {
 function bringToTop(element) {
     biggestIndex++;
     element.style.zIndex = biggestIndex;
-    navBar.style.zIndex = biggestIndex + 1;
+    achievementPopup.style.zIndex = biggestIndex + 1;
+    navBar.style.zIndex = biggestIndex + 2;
 }
 
 function dragElement(element) {
     var initX = 0, initY = 0, currX = 0, currY = 0;
-    // if (document.getElementById("window-handle")) {
-    //     document.getElementById("window-handle").onmousedown = dragMouseDown;
-    // } else {
-    //     element.onmousedown = dragMouseDown;
-    // }
 
     const windowHandle = element.querySelector(".window-handle");
     if (windowHandle) {

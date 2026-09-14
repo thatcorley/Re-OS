@@ -1,4 +1,5 @@
 import systemSettings from "./config.js";
+import unlock from "./achivements.js";
 
 const apps = {
     welcome: {
@@ -41,12 +42,22 @@ const apps = {
         window: "findBetty",
         desktop: true,
         openOnStart: false
+    },
+    achievements: {
+        enabled: true,
+        name: "Achievements",
+        icon: "🏅",
+        window: "achievements",
+        desktop: true
     }
-}
+};
 
 function playRBD() {
     var audio = new Audio('assets/audio/return-by-death.mp3');
     audio.play();
+    setTimeout(() => {
+            unlock("play_rbd_audio")
+        }, 2000);
 }
 
 const desktop = document.getElementById("desktop");
@@ -81,7 +92,7 @@ if (systemSettings.appEnabled.state) {
 
             desktop.appendChild(appIcon);
         } else {
-            appWindow.remove()
+            if (appWindow) {appWindow.remove()};
         }
     }
 }

@@ -1,4 +1,5 @@
 import systemSettings from "./config.js";
+import unlock from "./achivements.js";
 var booted = false
 
 const bootScreen = document.getElementById("boot-screen");
@@ -48,7 +49,9 @@ if (systemSettings.skipBootScreen.state == false) {
             bootOS();
             rbdAudio.play();
         }, 1000);
-
+        setTimeout(() => {
+            unlock("crush_heart")
+        }, 3000);
     })
 
     function bootOS() {
