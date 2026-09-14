@@ -18,6 +18,12 @@ const achievementList = [
         title: "She doesn't want to see you...",
         description: "Fail to find betty 100 times",
         icon: "🚪"
+    },
+    {
+        id: "sloth_5_mins",
+        title: "Slothful",
+        description: "Don't interact with the site for 5 minutes",
+        icon: "💤"
     }
 ];
 
