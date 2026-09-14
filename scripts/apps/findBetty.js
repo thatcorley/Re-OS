@@ -19,7 +19,7 @@ for (let i = 0; i < doors.length; i++) {
             failText.innerHTML = "Fails: " + fail
         }
 
-        if (fail == 10) {
+        if (fail == 100) {
             unlock("fail_betty_10")
         }
     })

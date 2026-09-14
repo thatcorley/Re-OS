@@ -16,7 +16,7 @@ const achievementList = [
     {
         id: "fail_betty_10",
         title: "She doesn't want to see you...",
-        description: "Fail to find betty 10 times",
+        description: "Fail to find betty 100 times",
         icon: "🚪"
     }
 ];
