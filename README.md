@@ -16,6 +16,7 @@ Still in progress at the moment so expect missing features and rough edges.
 - ✅ Wallpapers
 - ✅ World Map
 - ✅ Find Betty (Game)
+- ✅ Achievements
 
 Click on a door for a 1 in 3 chance to find Betty
 - ❎ Taygeta Library (Books of the Dead)
@@ -26,6 +27,7 @@ Click on a door for a 1 in 3 chance to find Betty
 - Draggable, closable windows via a custom window manager
 - Swappable desktop wallpapers
 - Modular app system - each app uses an app registry which can use different functions and js files
+- Saved data such as last used wallpaper and achievements
 
 ## Tech stack
 
